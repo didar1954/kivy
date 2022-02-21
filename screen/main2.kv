@@ -1,0 +1,87 @@
+WindowManager:
+    MainWindow:
+    SectionWindow:
+    PersonalWindow:
+    ProgressWindow:
+    MBazeWindow:
+    ErbolulyDWindow:
+
+<MainWindow>:
+    name: "main"
+    BoxLayout:
+        orientation:'vertical'
+        BoxLayout:
+            size_hint_y:.25
+            padding:dp(25)
+            BoxLayout:
+                orientation:"vertical"
+                Label:
+                    text:"Спорт Кешені"
+                    font_style:"H4"
+                BoxLayout:
+                    adaptive_size:True
+                    spacing:dp(10)
+                    Label:
+                        text:"Home"
+                        text_size:None,None
+                        adaptive_width:True
+
+        GridLayout:
+            size_hint_y:.75
+            cols:2
+            padding:[dp(15),dp(15),dp(15),dp(35)]
+            spacing:dp(15)
+            Button:
+                image:"images/section.png"
+                text:"Секциялар"
+                on_release:
+                    app.root.current="Section"
+            Button:
+                image:"images/food.png"
+                text:"Groceries"
+
+            Button:
+                image:"images/map.png"
+                text:"Location"
+
+
+            Button:
+                image:"images/festival.png"
+                text:"Activity"
+
+            Button:
+                image:"images/todo.png"
+                text:"To Do"
+
+            Button:
+                image:"images/setting.png"
+                text:"Setting"
+
+
+<SectionWindow>:
+    name: "Section"
+    Button:
+        text: "Go Back"
+        on_release:
+            app.root.current="main"
+
+<PersonalWindow>:
+    name: "Personal"
+    Button:
+        text: "Go Back"
+        on_release:
+            app.root.current="main"
+
+<ProgressWindow>:
+    name: "Progress"
+    Button:
+        text: "Go Back"
+        on_release:
+            app.root.current="main"
+
+<MBazeWindow>:
+    name: "MBase"
+    Button:
+        text: "Go Back"
+        on_release:
+            app.root.current="main"
